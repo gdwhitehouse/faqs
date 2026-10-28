@@ -148,33 +148,14 @@
     <div class="wrap">
       <input class="search" type="search" placeholder="Search questions…" aria-label="Search questions">
 
-      <!-- To add a question: copy a <details> block. To add a section later: wrap questions in their own <section> with an <h2>. -->
+      <!-- To add a question: copy a <details> block. To add a section: copy a whole <section> block and change its <h2>. -->
       <section>
+        <h2>What’s changing</h2>
+
         <details>
           <summary>Can I still report cars via a P46(car) and P11D if I so choose?</summary>
           <div class="answer">
             <p>No. HMRC has mandated that all car information (as well as van and medical information) must be sent to them in real time via the FPS. The facility to send P46(car) and P11D information via FBI (File By Internet) has been removed.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>What if the benefit doesn’t divide equally over the number of pay periods?</summary>
-          <div class="answer">
-            <p>HMRC wants you to report the whole correct amount over the tax year. As the benefit is calculated every month, this should ideally even out over the course of the year; however, you also have the option of making one different payment towards the end of the tax year to correct any shortfall.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>If the benefit hasn’t changed, do I need to send the information every pay period or will HMRC carry on using the existing figure?</summary>
-          <div class="answer">
-            <p>You need to send the complete set of information every pay period, even if a benefit hasn’t changed. This includes ALL the car information.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>If I am payrolling some other benefits (like Section K, for example), do I still report Class 1A at the end of the year on a P11D(b)?</summary>
-          <div class="answer">
-            <p>No. All payrolled benefits, whether mandated or not, need to have their Class 1A reported in the FPS each pay period.</p>
           </div>
         </details>
 
@@ -186,30 +167,9 @@
         </details>
 
         <details>
-          <summary>We used to total all the benefits we had provided and use that to calculate the Class 1A at the end of the year. Is that still the case?</summary>
+          <summary>If the benefit hasn’t changed, do I need to send the information every pay period or will HMRC carry on using the existing figure?</summary>
           <div class="answer">
-            <p>No. Any payrolled benefit has its associated Class 1A reported in each pay period. It is also worth noting that Class 1A is now calculated at employee level and then totalled, rather than the other way round, which may introduce small rounding differences compared with existing methods.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>We have been late allocating a medical benefit to an employee. They have had it for six months and we haven’t reported anything. What should we do?</summary>
-          <div class="answer">
-            <p>Not a problem. Just enter the correct details in PBiK Organiser and it will spread the benefit over the remaining pay periods.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Will I have to enter/import information into PBiK Organiser more often?</summary>
-          <div class="answer">
-            <p>Yes. Your workflow will need to change, and you will likely have to enter or import information every pay period. We would expect most users to import only the elements that have changed, although importing all the data will also work.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Do I have to send benefit statements to employees every pay period?</summary>
-          <div class="answer">
-            <p>No, there is no legislation that requires you to send benefit statements. However, some payroll systems will just display a summary of the payrolled benefits, and many customers will want to give employees finer detail, so will issue more detailed statements.</p>
+            <p>You need to send the complete set of information every pay period, even if a benefit hasn’t changed. This includes ALL the car information.</p>
           </div>
         </details>
 
@@ -219,18 +179,89 @@
             <p>Some will, but the majority will not see a huge change, as HMRC will already have been allowing for the expected value in employees’ tax codes. However, there will inevitably be some who will be paying for last year’s benefit as well as this year’s.</p>
           </div>
         </details>
+      </section>
+
+      <section>
+        <h2>Valuing and reporting benefits</h2>
 
         <details>
-          <summary>How do I pass the benefits information to my payroll system?</summary>
+          <summary>What if the benefit doesn’t divide equally over the number of pay periods?</summary>
           <div class="answer">
-            <p>Most payroll systems have an import function, and PBiK Organiser will export a standard CSV file that they can ‘consume’. We would urge you to check that your payroll software can both handle payrolled benefits in kind AND accept an import file as soon as possible.</p>
+            <p>HMRC wants you to report the whole correct amount over the tax year. As the benefit is calculated every month, this should ideally even out over the course of the year; however, you also have the option of making one different payment towards the end of the tax year to correct any shortfall.</p>
           </div>
         </details>
 
         <details>
-          <summary>How will employees know that we have submitted the correct car information? They used to be able to check it on the P11D or benefit statement.</summary>
+          <summary>If an employee has given up salary in exchange for a benefit, what value do I report?</summary>
           <div class="answer">
-            <p>There is no requirement for you to send employees this information, but we would suggest that it is the best approach. For example, sending a benefit statement each time there is a car change or a medical premium change would be sensible.</p>
+            <p>The higher of the two: the amount of salary given up, or the benefit’s normal cash-equivalent value. This stops salary sacrifice being used to route pay through a benefit that is deliberately valued lower than the salary given up for it.</p>
+            <p>There is one exception: a company car with CO<sub>2</sub> emissions of 75g/km or less is always reported at its normal value, however much salary was given up for it. Vans have no equivalent exemption.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I report a company car’s fuel benefit as part of the car’s figure, or separately?</summary>
+          <div class="answer">
+            <p>Separately. A car’s cash-equivalent value and its private fuel benefit are two independent figures in the FPS, even though they both relate to the same car.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>An employee has two company cars (or two medical policies). How is that reported?</summary>
+          <div class="answer">
+            <p>As one combined figure per benefit type per pay period. Payroll only ever sees a single car total and a single medical total for that employee, however many individual lines sit behind it.</p>
+          </div>
+        </details>
+      </section>
+
+      <section>
+        <h2>Class 1A National Insurance</h2>
+
+        <details>
+          <summary>If I am payrolling some other benefits (like Section K, for example), do I still report Class 1A at the end of the year on a P11D(b)?</summary>
+          <div class="answer">
+            <p>No. All payrolled benefits, whether mandated or not, need to have their Class 1A reported in the FPS each pay period.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>We used to total all the benefits we had provided and use that to calculate the Class 1A at the end of the year. Is that still the case?</summary>
+          <div class="answer">
+            <p>No. Any payrolled benefit has its associated Class 1A reported in each pay period. It is also worth noting that Class 1A is now calculated at employee level and then totalled, rather than the other way round, which may introduce small rounding differences compared with existing methods.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I round each employee’s benefits individually and then add them up for my Class 1A total?</summary>
+          <div class="answer">
+            <p>Round once per employee per pay period, on their combined benefits. Never round each benefit separately first, and never round a combined figure across multiple employees.</p>
+            <p>Rounding individually first can quietly change the final total: several small benefits for one employee could each round down to zero individually, while their true combined figure would have rounded up.</p>
+          </div>
+        </details>
+      </section>
+
+      <section>
+        <h2>Corrections, changes and leavers</h2>
+
+        <details>
+          <summary>We have been late allocating a medical benefit to an employee. They have had it for six months and we haven’t reported anything. What should we do?</summary>
+          <div class="answer">
+            <p>Not a problem. Just enter the correct details in PBiK Organiser and it will spread the benefit over the remaining pay periods.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>I have payrolled too much for an employee because I entered incorrect car information, which means they have paid too much tax. How do I correct that?</summary>
+          <div class="answer">
+            <p>Correct the car information in the system and the benefit will be recalculated. If there has been an overpayment, a negative value will be created to send to payroll to correct things. If an employee has paid too much tax, it is corrected in the next FPS; if they have paid too little, it can be spread over the remaining pay periods.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What’s the difference between correcting a mistake and reporting a genuine change, like a new capital contribution?</summary>
+          <div class="answer">
+            <p>A genuine change (such as a capital contribution added mid-year, or a benefit ending) only applies from its own date onward; earlier periods keep the old figure.</p>
+            <p>A correction (fixing something that has been wrong since the benefit started, such as the wrong CO<sub>2</sub> figure) recalculates the whole year at the corrected rate and spreads the difference across the periods still open. It is never collected as a lump sum, except that an overpayment can be refunded in full in the very next period.</p>
           </div>
         </details>
 
@@ -242,9 +273,41 @@
         </details>
 
         <details>
-          <summary>I have payrolled too much for an employee because I entered incorrect car information, which means they have paid too much tax. How do I correct that?</summary>
+          <summary>Can I keep reporting a benefit, such as a company car, for someone after they’ve left?</summary>
           <div class="answer">
-            <p>Correct the car information in the system and the benefit will be recalculated. If there has been an overpayment, a negative value will be created to send to payroll to correct things. If an employee has paid too much tax, it is corrected in the next FPS; if they have paid too little, it can be spread over the remaining pay periods.</p>
+            <p>Yes. HMRC’s “Payment after Leaving” mechanism lets you keep submitting FPS data under the person’s original leaving date and payroll ID (tax code 0T) if a benefit genuinely continues after employment ends.</p>
+          </div>
+        </details>
+      </section>
+
+      <section>
+        <h2>PBiK Organiser, payroll and employees</h2>
+
+        <details>
+          <summary>Will I have to enter/import information into PBiK Organiser more often?</summary>
+          <div class="answer">
+            <p>Yes. Your workflow will need to change, and you will likely have to enter or import information every pay period. We would expect most users to import only the elements that have changed, although importing all the data will also work.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I pass the benefits information to my payroll system?</summary>
+          <div class="answer">
+            <p>Most payroll systems have an import function, and PBiK Organiser will export a standard CSV file that they can ‘consume’. We would urge you to check that your payroll software can both handle payrolled benefits in kind AND accept an import file as soon as possible.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I have to send benefit statements to employees every pay period?</summary>
+          <div class="answer">
+            <p>No, there is no legislation that requires you to send benefit statements. However, some payroll systems will just display a summary of the payrolled benefits, and many customers will want to give employees finer detail, so will issue more detailed statements.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How will employees know that we have submitted the correct car information? They used to be able to check it on the P11D or benefit statement.</summary>
+          <div class="answer">
+            <p>There is no requirement for you to send employees this information, but we would suggest that it is the best approach. For example, sending a benefit statement each time there is a car change or a medical premium change would be sensible.</p>
           </div>
         </details>
       </section>
