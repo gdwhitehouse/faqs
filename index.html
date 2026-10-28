@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Palette and type taken from the PBiK web app (pbik-poc/azure-api/web-app/src/index.css) */
+    :root {
+      --color-bg: #f3f2f2;
+      --color-surface: #ffffff;
+      --color-surface-hover: #f8f4f4;
+      --color-text: #201e1d;
+      --color-muted: #605d5d;
+      --color-border: #d7d3d3;
+      --color-accent: #ec3013;
+      --color-accent-soft: #fff2ef;
+      --font: "Archivo", system-ui, sans-serif;
+      --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--color-text);
+      color: #fff;
+      border-bottom: 6px solid var(--color-accent);
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header .wrap { padding-top: 48px; padding-bottom: 40px; }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    header p { margin: 0; color: #d7d3d3; }
+
+    main .wrap { padding-top: 24px; padding-bottom: 64px; }
+
+    .search {
+      width: 100%;
+      margin: 8px 0 8px;
+      padding: 14px 16px;
+      font: inherit;
+      color: inherit;
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: 0;
+      outline: none;
+    }
+    .search:focus { border-color: var(--color-accent); }
+
+    section h2 {
+      margin: 40px 0 16px;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    details {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-left: 6px solid var(--color-text);
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s;
+    }
+    details:hover { border-left-color: var(--color-accent); }
+    details[open] { border-color: var(--color-accent); border-left-color: var(--color-accent); }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      font-weight: 600;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { background: var(--color-surface-hover); }
+    summary:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+    summary::after {
+      content: "";
+      flex: none;
+      width: 10px;
+      height: 10px;
+      border-right: 3px solid var(--color-text);
+      border-bottom: 3px solid var(--color-text);
+      transform: translateY(-3px) rotate(45deg);
+      transition: transform 0.2s;
+    }
+    details[open] summary::after {
+      transform: translateY(3px) rotate(-135deg);
+      border-color: var(--color-accent);
+    }
+
+    .answer {
+      padding: 0 20px 20px;
+      color: var(--color-muted);
+    }
+    .answer p { margin: 0 0 12px; }
+    .answer p:last-child { margin-bottom: 0; }
+    .answer a { color: var(--color-accent); }
+
+    .no-results { display: none; color: var(--color-muted); margin-top: 32px; }
+
+    footer {
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      padding: 0 16px 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Frequently Asked Questions</h1>
+      <p>Can't find what you're looking for? Get in touch and we'll help.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <input class="search" type="search" placeholder="Search questions…" aria-label="Search questions">
+
+      <!-- To add a question: copy a <details> block. To add a section: copy a <section> block. -->
+      <section>
+        <h2>Getting started</h2>
+
+        <details>
+          <summary>Placeholder question one?</summary>
+          <div class="answer">
+            <p>Placeholder answer. Your real answers will go here.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Placeholder question two?</summary>
+          <div class="answer">
+            <p>Answers can have more than one paragraph.</p>
+            <p>And can include <a href="#">links</a>.</p>
+          </div>
+        </details>
+      </section>
+
+      <section>
+        <h2>Another section</h2>
+
+        <details>
+          <summary>Placeholder question three?</summary>
+          <div class="answer">
+            <p>Placeholder answer.</p>
+          </div>
+        </details>
+      </section>
+
+      <p class="no-results">No questions match your search.</p>
+    </div>
+  </main>
+
+  <footer>Last updated October 2026</footer>
+
+  <script>
+    // Filter questions as you type; hides empty sections
+    const search = document.querySelector('.search');
+    const noResults = document.querySelector('.no-results');
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      let anyShown = false;
+      document.querySelectorAll('section').forEach(section => {
+        let sectionShown = false;
+        section.querySelectorAll('details').forEach(item => {
+          const match = !q || item.textContent.toLowerCase().includes(q);
+          item.hidden = !match;
+          if (match) sectionShown = true;
+        });
+        section.hidden = !sectionShown;
+        if (sectionShown) anyShown = true;
+      });
+      noResults.style.display = anyShown ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
